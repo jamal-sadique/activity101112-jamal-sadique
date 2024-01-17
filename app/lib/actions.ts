@@ -114,7 +114,6 @@ export async function updateInvoice(
 }
 
 export async function deleteInvoice(id: string) {
-  throw new Error('Failed to Delete Invoice'); // Throws error
 
   // Unreachable code block
   try {
