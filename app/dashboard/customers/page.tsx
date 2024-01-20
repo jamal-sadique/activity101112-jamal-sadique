@@ -10,20 +10,19 @@ export const metadata: Metadata = {
 };
  
 interface CustomersPageProps {
-  customersData: FormattedCustomersTable[]; // Assuming this is the type of your customer data
+  customersData?: FormattedCustomersTable[]; // Assuming this is the type of your customer data
 }
 
 
 export default async function Page({
-customersData,
 searchParams, 
-}: CustomersPageProps & { 
+}: { 
     searchParams?: {
     query?: string;
 };
 }) {
   const query = searchParams?.query || '';
-  const customers = customersData || (await fetchFilteredCustomers(query));
+  const customers = (await fetchFilteredCustomers(query));
 
   return (
     <main>
