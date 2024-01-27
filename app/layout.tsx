@@ -14,8 +14,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} antialiased`}>{children}</body>
+    <html data-theme="light" lang="en">
+      <body className={`${inter.className} relative antialiased`}>
+        {children}
+        </body>
     </html>
   );
 }
