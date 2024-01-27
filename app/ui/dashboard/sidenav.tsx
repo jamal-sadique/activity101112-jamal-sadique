@@ -3,6 +3,7 @@ import NavLinks from '@/app/ui/dashboard/nav-links';
 import AcmeLogo from '@/app/ui/acme-logo';
 import { PowerIcon } from '@heroicons/react/24/outline';
 import { signOut } from '@/auth';
+import ThemeSwitch from '@/app/ui/theme-switch';
 
 export default function SideNav() {
   return (
@@ -17,7 +18,10 @@ export default function SideNav() {
       </Link>
       <div className="flex grow flex-row justify-between space-x-2 md:flex-col md:space-x-0 md:space-y-2">
         <NavLinks />
-        <div className="hidden h-auto w-full grow rounded-md bg-gray-50 md:block"></div>
+        <div className="hidden h-auto w-full grow rounded-md bg-gray-50 md:flex md:flex-col md:items-center md:justify-end"> 
+        <div className="md:flex-grow"></div>
+        <ThemeSwitch />  
+        </div>
         <form action={async () => {
             'use server';
             await signOut();
