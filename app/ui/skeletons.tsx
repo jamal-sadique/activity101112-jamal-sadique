@@ -86,7 +86,7 @@ export default function DashboardSkeleton() {
   return (
     <>
       <div
-        className={`${shimmer} relative mb-4 h-8 w-36 overflow-hidden rounded-md bg-gray-100`}
+        className={`${shimmer} relative mb-4 h-8 w-36 overflow-hidden rounded-md bg-primary-content/20`}
       />
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         <CardSkeleton />
