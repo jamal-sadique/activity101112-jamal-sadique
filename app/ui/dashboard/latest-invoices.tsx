@@ -29,7 +29,7 @@ export default async function LatestInvoices() { // Remove props
                 className={clsx(
                   'flex flex-row items-center  justify-between py-4',
                   {
-                    'border-t ': i !== 0,
+                    'border-t border-primary-content': i !== 0,
                   },
                 )}
               >
