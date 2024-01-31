@@ -1,5 +1,6 @@
 import AcmeLogo from '@/app/ui/acme-logo';
 import LoginForm from '@/app/ui/login-form';
+import Link from 'next/link';
  
 export default function LoginPage() {
   return (
@@ -11,6 +12,11 @@ export default function LoginPage() {
           </div>
         </div>
         <LoginForm />
+        <div className='pt-8 flex items-center justify-center text-md text-base-content hover:text-base-content'>
+          <Link href='/' passHref>
+            Go to Homepage
+          </Link>
+        </div>
       </div>
     </main>
   );
