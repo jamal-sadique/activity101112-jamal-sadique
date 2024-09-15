@@ -10,6 +10,7 @@ import { ArrowRightIcon } from '@heroicons/react/20/solid';
 import { Button } from './button';
 import { useFormState, useFormStatus } from 'react-dom';
 import { authenticate } from '@/app/lib/actions';
+import LoginHint from './login-hint';
 
 export default function LoginForm() {
   const [errorMessage, dispatch] = useFormState(authenticate, undefined);
@@ -63,7 +64,7 @@ export default function LoginForm() {
         </div>
         <LoginButton />
         <div
-          className="flex h-8 items-end space-x-1"
+          className="flex h-4 items-end space-x-1"
           aria-live="polite"
           aria-atomic="true"
         >
@@ -74,6 +75,7 @@ export default function LoginForm() {
             </>
           )}
         </div>
+        <LoginHint />
       </div>
     </form>
   );
